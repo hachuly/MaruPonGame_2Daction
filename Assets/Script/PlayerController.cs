@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour {
     private bool hitBool;
     private int isFrame;
     private int isKillTime;
+    private int isBullet;
 
     private float axis;
 
@@ -221,14 +222,20 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void bulletController(){
-        if(Input.GetKeyDown(KeyCode.X)){
-            Instantiate(bullet, transform.position + new Vector3(0f, 0.5f, 0f), transform.rotation);
-            if((isGrounded == true) && ((JampRecastTimer + 0.05f < Time.time))){
-                anim.SetTrigger("stayShot");
-            }else{
-                anim.SetTrigger("jumpShot");
+        if(isBullet + 20 < Time.frameCount){
+            if(Input.GetKeyDown(KeyCode.X)){
+                isBullet = Time.frameCount;
+                Instantiate(bullet, transform.position + new Vector3(0f, 0.5f, 0f), transform.rotation);
+                    if((isGrounded == true) && ((JampRecastTimer + 0.05f < Time.time))){
+                        anim.SetTrigger("stayShot");
+                    }else{
+                        anim.SetTrigger("jumpShot");
+                }
+
             }
+
         }
+
     }
 
     public void butController(){

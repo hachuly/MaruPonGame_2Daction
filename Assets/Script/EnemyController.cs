@@ -48,6 +48,9 @@ public class EnemyController : MonoBehaviour {
             if(def < 0){
                 Destroy(gameObject);
                 Instantiate(bakuhatu, transform.position, transform.rotation);
+                if(other.gameObject.tag == "tagBullet"){
+                    Destroy(other.gameObject);
+                }
             }
 
         }

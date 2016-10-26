@@ -16,7 +16,7 @@ public class BulletScript : MonoBehaviour {
         temp.x = player.transform.localScale.x;
         transform.localScale = temp;
 
-        Destroy(gameObject, 0.8f);
+        Destroy(gameObject, 0.55f);
 	}
 
 	// Update is called once per frame
@@ -24,7 +24,4 @@ public class BulletScript : MonoBehaviour {
 
 	}
 
-    void OnCollisionEnter2D(Collision2D other){
-        Destroy(gameObject);
-    }
 }

@@ -1,0 +1,465 @@
+fileFormatVersion: 2
+guid: 4255e1cf9e166834392f02ed45a20a0f
+timeCreated: 1477697242
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "B\u3061\u3083\u3093\u3068\u30FC\u304B_0"
+    21300002: "B\u3061\u3083\u3093\u3068\u30FC\u304B_1"
+    21300004: "B\u3061\u3083\u3093\u3068\u30FC\u304B_2"
+    21300006: "B\u3061\u3083\u3093\u3068\u30FC\u304B_3"
+    21300008: "B\u3061\u3083\u3093\u3068\u30FC\u304B_4"
+    21300010: "B\u3061\u3083\u3093\u3068\u30FC\u304B_5"
+    21300012: "B\u3061\u3083\u3093\u3068\u30FC\u304B_6"
+    21300014: "B\u3061\u3083\u3093\u3068\u30FC\u304B_7"
+    21300016: "B\u3061\u3083\u3093\u3068\u30FC\u304B_8"
+    21300018: "B\u3061\u3083\u3093\u3068\u30FC\u304B_9"
+    21300020: "B\u3061\u3083\u3093\u3068\u30FC\u304B_10"
+    21300022: "B\u3061\u3083\u3093\u3068\u30FC\u304B_11"
+    21300024: "B\u3061\u3083\u3093\u3068\u30FC\u304B_12"
+    21300026: "B\u3061\u3083\u3093\u3068\u30FC\u304B_13"
+    21300028: "B\u3061\u3083\u3093\u3068\u30FC\u304B_14"
+    21300030: "B\u3061\u3083\u3093\u3068\u30FC\u304B_15"
+    21300032: "B\u3061\u3083\u3093\u3068\u30FC\u304B_16"
+    21300034: "B\u3061\u3083\u3093\u3068\u30FC\u304B_17"
+    21300036: "B\u3061\u3083\u3093\u3068\u30FC\u304B_18"
+    21300038: "B\u3061\u3083\u3093\u3068\u30FC\u304B_19"
+    21300040: "B\u3061\u3083\u3093\u3068\u30FC\u304B_20"
+    21300042: "B\u3061\u3083\u3093\u3068\u30FC\u304B_21"
+    21300044: "B\u3061\u3083\u3093\u3068\u30FC\u304B_22"
+    21300046: "B\u3061\u3083\u3093\u3068\u30FC\u304B_23"
+    21300048: "B\u3061\u3083\u3093\u3068\u30FC\u304B_24"
+    21300050: "B\u3061\u3083\u3093\u3068\u30FC\u304B_25"
+    21300052: "B\u3061\u3083\u3093\u3068\u30FC\u304B_26"
+    21300054: "B\u3061\u3083\u3093\u3068\u30FC\u304B_27"
+    21300056: "B\u3061\u3083\u3093\u3068\u30FC\u304B_28"
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_0"
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 221
+        width: 24
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_1"
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 220
+        width: 25
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_2"
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 219
+        width: 24
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_3"
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 220
+        width: 22
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_4"
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 221
+        width: 25
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_5"
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 222
+        width: 33
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_6"
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 216
+        width: 43
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_7"
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 217
+        width: 37
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_8"
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 213
+        width: 33
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_9"
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 155
+        width: 40
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_10"
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 155
+        width: 33
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_11"
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 156
+        width: 36
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_12"
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 157
+        width: 36
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_13"
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 155
+        width: 27
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_14"
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 155
+        width: 27
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_15"
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 156
+        width: 21
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_16"
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 157
+        width: 45
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_17"
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 155
+        width: 41
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_18"
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 91
+        width: 31
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_19"
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 92
+        width: 24
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_20"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 92
+        width: 30
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_21"
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 23
+        width: 37
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_22"
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 23
+        width: 38
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_23"
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 23
+        width: 41
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_24"
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 23
+        width: 36
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_25"
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 23
+        width: 39
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_26"
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 23
+        width: 37
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_27"
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 23
+        width: 40
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "B\u3061\u3083\u3093\u3068\u30FC\u304B_28"
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 23
+        width: 38
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

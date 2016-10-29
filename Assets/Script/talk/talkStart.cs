@@ -5,6 +5,9 @@ using System.Collections;
 public class talkStart : MonoBehaviour {
 
     public GameObject talk;
+    private GameObject[] isReady;
+
+
 
     private string[] talkArray;
     private bool trigger;
@@ -13,6 +16,14 @@ public class talkStart : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         talk = gameObject;
+        isReady = new GameObject[4];
+        isReady[0] = GameObject.Find("isReady");
+        isReady[1] = GameObject.Find("startReady");
+        isReady[2] = GameObject.Find("Image_1");
+        isReady[3] = GameObject.Find("Image_2");
+        isReady[0].SetActive(false);
+        isReady[1].SetActive(false);
+
         setArray();
         i = 0;
         Time.timeScale = 0;
@@ -25,7 +36,8 @@ public class talkStart : MonoBehaviour {
 
     private void nextTalk(){
         if(trigger != true){
-            if(Input.GetKeyDown(KeyCode.Space)){                setComents(getComents());
+            if(Input.GetKeyDown(KeyCode.Space)){
+                setComents(getComents());
             }
         }
 
@@ -37,7 +49,11 @@ public class talkStart : MonoBehaviour {
         if(i > 7){
             trigger = true;
             gameObject.SetActive(false);
+            isReady[2].SetActive(false);
+            isReady[3].SetActive(false);
             Time.timeScale = 1;
+            isReady[0].SetActive(true);
+            isReady[1].SetActive(true);
         }
     }
 

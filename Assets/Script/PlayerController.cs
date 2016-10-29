@@ -1,18 +1,23 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-    public float speed = 3f;
-    public float jump = 700f;
+    private LifeScript gauge;
+    private TimerController stopTime;
+    private GhostSprites special;
+    private float speed = 3f;
+    private float jump = 700f;
     public int skill = 0;
     public bool kill = false;
+    private bool killAll;
     public LayerMask groundLayer;
     public GameObject mainCamera;
     public GameObject gorlBar;
     public GameObject bullet;
     public GameObject but;
     public GameObject butPos;
+    public bool onStop;
 
     private bool isGrounded;
     private Vector3 cameraPos;
@@ -28,49 +33,94 @@ public class PlayerController : MonoBehaviour {
     private bool JampRecastTrigger;
     private bool gorlBool;
     private bool hitBool;
+    private bool hitFlash;
     private int isFrame;
     private int isKillTime;
     private int isBullet;
+    private int isFlashFrame;
+    private string name;
 
     private float axis;
 
 	// Use this for initialization
 	void Start () {
+        gauge = GameObject.Find("HP").GetComponent<LifeScript>();
+        stopTime = GameObject.Find("TimerText").GetComponent<TimerController>();
         anim = GetComponent<Animator>();
         rigid2D = GetComponent<Rigidbody2D>();
+        special = GetComponent<GhostSprites>();
+        special.getTrailSize(2);
+        name = GetComponent<isName>().getName();
+
 	}
 
-    void Update(){;
+    void Update(){
         if(gorlBool){
-        }else{
-            bulletController();
-            butController();
+            stopTime.gaming_state(false);
+        }else if(onStop){
+            if(name == "z"){
+                butController();
+            }else if(name == "x"){
+                bulletController();
+            }
+
             if(kill){
-                if(isKillTime + 10 < Time.time){
-                    kill = false;
-                    speed = 3f;
-                    jump = 700f;
-                }else{
-                    speed = 5f;
-                    jump = 800f;
+                if(name == "z"){
+                    hitBool = false;
+                    if(isKillTime + 3 < Time.time){
+                        kill = false;
+                        skill = 0;
+                        speed = 3f;
+                        jump = 700f;
+                        special.getTrailSize(2);
+                    }else{
+
+                        speed = 8f;
+                        jump = 800f;
+                        special.getTrailSize(7);
+                    }
+
+                }else if(name == "x"){
+                    DashControll();
+                    if(hitBool){
+                        isFlash();
+                        if(isFrame + 40 < Time.frameCount){
+                            hitBool = false;
+                            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                        }
+
+                    }
+                    if(Input.GetKeyDown(KeyCode.V)){
+                        kill = false;
+                        killRay();
+                        gauge.inState(true);
+                        gauge.skill();
+                    }
+
                 }
-                DashControll();
+
+                //
                 JumpControll();
 
             }else if(hitBool){
+                isFlash();
                 if(isFrame + 40 < Time.frameCount){
                     hitBool = false;
+                    gameObject.GetComponent<SpriteRenderer>().enabled = true;
                 }
             }else{
                 DashControll();
                 JumpControll();
             }
+
         }
+
     }
 
 	// Update is called once per frame
 	void FixedUpdate () {
         if(gorlBool){
+
             isGrounded = Physics2D.Linecast(transform.position + transform.up * 1, transform.position - transform.up * 0.01f, groundLayer);
             if(isGrounded == true){
                 anim.SetBool("Runner", true);
@@ -89,8 +139,9 @@ public class PlayerController : MonoBehaviour {
             //結果をアニメータービューの変数へ反映
             anim.SetBool("isJumping", isJumping);
             anim.SetBool("isFalling", isFalling);
+            anim.SetBool("isGround", isGrounded);
 
-        }else{
+        }else if(onStop){
             if(hitBool != true){
                 RunControll();
             }CameraControll();
@@ -154,6 +205,7 @@ public class PlayerController : MonoBehaviour {
         //結果をアニメータービューの変数へ反映
         anim.SetBool("isJumping", isJumping);
         anim.SetBool("isFalling", isFalling);
+        anim.SetBool("isGround", isGrounded);
     }
 
     private void DashControll(){
@@ -197,9 +249,7 @@ public class PlayerController : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D other){
         if(other.gameObject.tag == "tagEnemy"){
 
-            if(kill){
-                Destroy(other.gameObject);
-            }else{
+            if(kill == false || name =="x"){
                 if(isGrounded == true){
                     rigid2D.AddForce(transform.up * 150f);
                     rigid2D.AddForce(transform.right * -150f);
@@ -208,6 +258,7 @@ public class PlayerController : MonoBehaviour {
                     rigid2D.AddForce(transform.right * -30f);
                 }
                 hitBool = true;
+                isFlashFrame = Time.frameCount;
                 isFrame = Time.frameCount;
                 anim.SetBool("Runner", false);
                 anim.SetBool("Dash", false);
@@ -219,6 +270,10 @@ public class PlayerController : MonoBehaviour {
 
         }
 
+    }
+
+    public string getName(){
+        return name;
     }
 
     private void bulletController(){
@@ -239,7 +294,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void butController(){
-        if(Input.GetKeyDown(KeyCode.C)){
+        if(Input.GetKeyDown(KeyCode.X)){
+            anim.SetTrigger("stayShot");
             butPos = Instantiate(but) as GameObject;
             Rigidbody2D butRig2d;
             butRig2d = butPos.GetComponent<Rigidbody2D>();
@@ -265,10 +321,70 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void skillGauge (int a){
-        skill += a;
-        if(skill < 10){
+        if(gauge.getState() == false){
+            if(name == "x"){
+                gauge.LifeDown(a + 50);
+            }else if(name == "z"){
+                gauge.LifeDown(a + 20);
+            }
+
+        }
+
+        if(gauge.getState()){
             kill = true;
-            isKillTime = (int)Time.time;
+            if(name == "z"){
+                isKillTime = (int)Time.time;
+                gauge.skill();
+            }
+
+        }
+
+    }
+
+    public bool isKill(){
+        return kill;
+    }
+
+    public bool isDestroy(){
+        return killAll;
+    }
+
+    public void endDestroy(){
+        killAll = false;
+    }
+
+    public void isFlash(){
+        if(isFlashFrame + 5 < Time.frameCount){
+            if(hitFlash){
+                gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                hitFlash = false;
+            }else{
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                hitFlash = true;
+
+            }isFlashFrame = Time.frameCount;
+
+        }
+
+    }
+
+    public void getState(bool n){
+        onStop = n;
+    }
+
+    public void killRay(){
+        int layer = 1 << 8;
+        Ray ray = Camera.main.ScreenPointToRay(transform.position);
+        Vector2 ray_position = (Vector2)ray.origin;
+        RaycastHit2D[] hit;
+
+        hit = Physics2D.CircleCastAll(ray.origin,12f, Vector2.zero);
+        foreach(RaycastHit2D i in hit){
+            if(i.collider.gameObject.tag == "tagEnemy"){
+                i.collider.gameObject.GetComponent<EnemyController>().dokan();
+
+            }
+
         }
 
     }

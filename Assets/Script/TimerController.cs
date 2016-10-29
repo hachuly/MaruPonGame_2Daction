@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -10,6 +10,8 @@ public class TimerController : MonoBehaviour {
     private int hours;
     private int minutes;
     private int seconds;
+    private int isClock = 0;
+    public GameObject result;
 
     private bool TimeTrigger;
     private bool dayManager;
@@ -29,8 +31,10 @@ public class TimerController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if(gaming != true){
+        if(gaming){
             this.TimerText.GetComponent<Text>().text = stringDay + Hours(hours) + "h " + Minutes(minutes) + "m " + Seconds(seconds) + "s";
+        }else{
+            isClock = (int)Time.time;
         }
 
 	}
@@ -72,21 +76,24 @@ public class TimerController : MonoBehaviour {
     }
 
     private string Seconds(int s){
-        seconds = (int)Time.time % 100;
-        if(TimeTrigger){
-            if(seconds == 0){
-                minutes++;
-                TimeTrigger = false;
+        if(isClock < (int)Time.time){
+            isClock = (int)Time.time;
+            seconds++;
+            if(TimeTrigger){
+                if(seconds == 0){
+                    minutes++;
+                    TimeTrigger = false;
+                }
+            }else{
+                if(seconds % 60 != 0){
+                    TimeTrigger = true;
+                }
             }
-        }else{
-            if(seconds % 60 != 0){
-                TimeTrigger = true;
-            }
-        }
-        if(seconds < 10)
-            return "0" + seconds.ToString();
 
-        return seconds.ToString();
+        }if(seconds < 10){
+                return "0" + seconds.ToString();
+        }return seconds.ToString();
+
     }
 
     public void gaming_state(bool trigger){

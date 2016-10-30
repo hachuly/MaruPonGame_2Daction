@@ -76,16 +76,15 @@ public class TimerController : MonoBehaviour {
     }
 
     private string Seconds(int s){
-        if(isClock < (int)Time.time){
-            isClock = (int)Time.time;
+        if(isClock+20 < Time.frameCount){
+            isClock = Time.frameCount;
             seconds++;
             if(TimeTrigger){
-                if(seconds == 0){
-                    minutes++;
-                    TimeTrigger = false;
-                }
+                minutes++;
+                seconds = 0;
+                TimeTrigger = false;
             }else{
-                if(seconds % 60 != 0){
+                if(seconds % 60 == 0){
                     TimeTrigger = true;
                 }
             }

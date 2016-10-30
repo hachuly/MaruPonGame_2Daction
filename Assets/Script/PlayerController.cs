@@ -381,6 +381,7 @@ public class PlayerController : MonoBehaviour {
         hit = Physics2D.CircleCastAll(ray.origin,12f, Vector2.zero);
         foreach(RaycastHit2D i in hit){
             if(i.collider.gameObject.tag == "tagEnemy"){
+                i.collider.gameObject.GetComponent<EnemyController>().playSE();
                 i.collider.gameObject.GetComponent<EnemyController>().dokan();
 
             }
